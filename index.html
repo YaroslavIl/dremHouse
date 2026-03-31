@@ -5,9 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1774957229763"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1774957229763">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1774957229763">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1774975173265"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1774975173265">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1774975173265">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -22,7 +22,7 @@
 					<div data-fls-fullpage="" data-fls-fullpage-bullets="" class="fullpage">
 						<section data-fls-fullpage-section="" class="fullpage__section">
 							<div data-fls-sidepanel="" class="sidepanel">
-								<div class="sidepanel__logo">
+								<div data-fls-dynamic=".customheader__menu, 768, 0" class="sidepanel__logo">
 									<img src="./assets/img/logo.svg" alt="лого сайту" class="sidepanel__img">
 								</div>
 								<p class="sidepanel__text">apartment renovation</p>
@@ -96,6 +96,9 @@
 								</picture>
 							</div>
 						</section>
+						<div class="table-form">
+							<!-- <include src="@components/custom/projectform/projectform.html"></include> -->
+						</div>
 						<section data-fls-fullpage-section="" class="fullpage__section">
 							<div class="fullpage__img-fon">
 								<picture>
