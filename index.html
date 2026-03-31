@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Home Page</title>
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1774940123829"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1774940123829">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1774940123829">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header data-fls-header="" class="header">
+				<div class="header__container">
+					<!-- <include src="@components/layout/menu/menu.html" locals='{"active":"Home"}'></include> -->
+					<!-- <include src="@components/custom/iconphone/iconphone.html"></include> -->
+				</div>
+			</header>
+			<main class="page">
+				<div data-fls-index="" class="index">
+					<div data-fls-fullpage="" class="fullpage">
+						<section data-fls-fullpage-section="" class="fullpage__section">
+							<div data-fls-sidepanel="" class="sidepanel">
+								<div class="sidepanel__logo">
+									<img src="./assets/img/logo.svg" alt="лого сайту" class="sidepanel__img">
+								</div>
+								<p class="sidepanel__text">apartment renovation</p>
+								<span class="sidepanel__decor"></span>
+								<div class="sidepanel__social">
+									<a href="#" class="sidepanel__item">
+										<img src="./assets/img/socialIcon/facebook.svg" alt="facebookIcon">
+									</a>
+									<a href="#" class="sidepanel__item">
+										<img src="./assets/img/socialIcon/Instagram.svg" alt="InstagraIcon">
+									</a>
+									<a href="#" class="sidepanel__item">
+										<img src="./assets/img/socialIcon/telegram.svg" alt="telegramIcon">
+									</a>
+									<a href="#" class="sidepanel__item">
+										<img src="./assets/img/socialIcon/youtube.svg" alt="youtubeIcon">
+									</a>
+								</div>
+							</div>
+							<section data-fls-customheader="" class="customheader">
+								<div class="customheader__container">
+									<div class="customheader__menu">
+										<section data-fls-custommenu="" class="custommenu menu">
+											<button type="button" data-fls-menu="" class="menu__icon icon-menu">
+												<span></span>
+											</button>
+											<nav class="menu__body">
+												<ul class="menu__list"></ul>
+											</nav>
+										</section>
+										<div class="tel">
+											<a class="tel__link" href="tel:+380765475123">+38 (097) 987 78 88</a>
+										</div>
+									</div>
+									<div class="call">
+										<a class="call__link" href="#">request for a call</a>
+										<section data-fls-iconphone="" class="iconphone">
+											<a href="#" class="phone">
+												<div class="phone__big-circle"></div>
+												<div class="phone__medium-circle"></div>
+												<div class="phone__small-circle"></div>
+												<div class="phone__inner">
+													<img src="./assets/img/phone.svg" alt="phone" class="phone__img">
+												</div>
+											</a>
+										</section>
+									</div>
+								</div>
+							</section>
+							<div data-fls-projectform="" class="projectform">
+								<form class="projectform__form form" data-fls-form="" action="#" method="post">
+									<input data-fls-input="" autocomplete="name" type="text" name="form[]" data-error="Помилка" required placeholder="Your name" aria-label="Your name" class="form__name input">
+									<input data-fls-input="" autocomplete="tel" type="tel" name="form[]" data-error="Помилка" required placeholder="Your phone number" aria-label="Your phone number" class="form__tel input">
+									<button class="form__btn" type="submit">discuss a project</button>
+								</form>
+							</div>
+							<div class="fullpage__img-fon">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/section1-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/section1-1200.webp" type="image/webp">
+									<img class="fullpage__pic" alt="Image" src="./assets/img/section1.webp">
+								</picture>
+							</div>
+						</section>
+						<section data-fls-fullpage-section="" class="fullpage__section">
+							<div class="fullpage__img-fon">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/section2-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/section2-1200.webp" type="image/webp">
+									<img class="fullpage__pic" alt="Image" src="./assets/img/section2.webp">
+								</picture>
+							</div>
+						</section>
+					</div>
+				</div>
+			</main>
+			<footer data-fls-footer="" class="footer">
+				<div class="footer__container"></div>
+			</footer>
+		</div>
+	</body>
+</html>
