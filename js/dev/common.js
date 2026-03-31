@@ -11,6 +11,9 @@ const isMobile = { Android: function() {
 }, any: function() {
   return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
 } };
+function addTouchAttr() {
+  if (isMobile.any()) document.documentElement.setAttribute("data-fls-touch", "");
+}
 function addLoadedAttr() {
   if (!document.documentElement.hasAttribute("data-fls-preloader-loading")) {
     window.addEventListener("load", function() {
@@ -93,6 +96,7 @@ const gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) =>
   }
 };
 addLoadedAttr();
+addTouchAttr();
 export {
   bodyLockStatus as a,
   bodyLockToggle as b,

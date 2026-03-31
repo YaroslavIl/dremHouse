@@ -728,6 +728,14 @@ function formInit() {
   formFieldsInit();
 }
 document.querySelector("[data-fls-form]") ? window.addEventListener("load", formInit) : null;
+const projectform = document.querySelector(".projectform");
+if (!matchMedia("(any-hover: hover) and (pointer: fine)").matches) {
+  projectform.classList.add("projectform--animated");
+} else {
+  projectform.addEventListener("mouseenter", function() {
+    this.classList.add("projectform--animated");
+  }, { once: true });
+}
 document.addEventListener("DOMContentLoaded", () => {
   const animPhone = document.querySelector(".phone");
   if (!animPhone) return;

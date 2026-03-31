@@ -5,9 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1774940123829"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1774940123829">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1774940123829">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1774957229763"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1774957229763">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1774957229763">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -19,7 +19,7 @@
 			</header>
 			<main class="page">
 				<div data-fls-index="" class="index">
-					<div data-fls-fullpage="" class="fullpage">
+					<div data-fls-fullpage="" data-fls-fullpage-bullets="" class="fullpage">
 						<section data-fls-fullpage-section="" class="fullpage__section">
 							<div data-fls-sidepanel="" class="sidepanel">
 								<div class="sidepanel__logo">
@@ -76,9 +76,18 @@
 								<form class="projectform__form form" data-fls-form="" action="#" method="post">
 									<input data-fls-input="" autocomplete="name" type="text" name="form[]" data-error="Помилка" required placeholder="Your name" aria-label="Your name" class="form__name input">
 									<input data-fls-input="" autocomplete="tel" type="tel" name="form[]" data-error="Помилка" required placeholder="Your phone number" aria-label="Your phone number" class="form__tel input">
-									<button class="form__btn" type="submit">discuss a project</button>
+									<div class="form__inner-btn">
+										<button class="form__btn" type="submit">discuss a project</button>
+										<div class="form__decor decor">
+											<div class="decor__item"></div>
+											<div class="decor__arrow decor__arrow--icon-arrow"></div>
+										</div>
+									</div>
 								</form>
 							</div>
+							<h1 class="fullpage__title">
+								<img src="./assets/img/slogan.svg" alt="slogan">
+							</h1>
 							<div class="fullpage__img-fon">
 								<picture>
 									<source media="(max-width: 600px)" srcset="./assets/img/section1-600.webp" type="image/webp">
