@@ -235,6 +235,20 @@ body {
   text-align: center;
   color: #fff;
   transition: color 0.3s ease-in-out;
+  position: relative;
+}
+.content__title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -3.125rem;
+  height: 10.875rem;
+  width: 10.875rem;
+  border-right: 0.3125rem solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(0, -40%) scale(0.5);
+  transition: transform 0.3s ease-in 0.1s, opacity 0.3s ease-in 0.1s;
 }
 .content__hidden-box {
   position: absolute;
@@ -1150,6 +1164,11 @@ textarea.input {
   }
   .content__item:hover .content__title {
     color: #ffac30;
+  }
+  .content__item:hover .content__title::after {
+    transform: translate(0, -40%) scale(1);
+    opacity: 1;
+    transition: transform 0.3s ease-in 0.8s, opacity 0.3s ease-in 0.8s;
   }
   .content__link:hover {
     color: #ffac30;
