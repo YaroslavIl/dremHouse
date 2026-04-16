@@ -28,6 +28,39 @@ import { b as bodyLockToggle, a as bodyLockStatus, i as isMobile, g as gotoBlock
     fetch(link.href, fetchOpts);
   }
 })();
+const btnService = document.querySelectorAll(".content__link--service");
+btnService.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const item = btn.closest(".content__item");
+    console.log(item);
+    const styleInfo = item.querySelector(".content__hidden-box");
+    const listService = item.querySelector(".content__wrap");
+    const btnCloseService = item.querySelector(".content__close-service");
+    btnCloseService.classList.add("visible");
+    styleInfo.classList.add("box-hidden");
+    listService.classList.add("content-hidden");
+    const closeHandler = () => {
+      btnCloseService.classList.remove("visible");
+      styleInfo.classList.remove("box-hidden");
+      listService.classList.remove("content-hidden");
+      styleInfo.classList.add("slow-transition");
+      setTimeout(() => {
+        styleInfo.classList.remove("slow-transition");
+      }, 1e3);
+    };
+    btnCloseService.addEventListener("click", closeHandler);
+    item.addEventListener("mouseleave", closeHandler);
+  });
+});
+const items = document.querySelectorAll(".content__item");
+if (window.matchMedia("(hover: none)").matches) {
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      items.forEach((el) => el.classList.remove("active"));
+      item.classList.add("active");
+    });
+  });
+}
 function menuInit$1() {
   document.addEventListener("click", function(e) {
     if (bodyLockStatus && e.target.closest("[data-fls-menu]")) {
@@ -866,9 +899,9 @@ class ScrollWatcher {
     this.scrollWatcherConstructor(document.querySelectorAll("[data-fls-watcher]"));
   }
   // Конструктор спостерігачів
-  scrollWatcherConstructor(items) {
-    if (items.length) {
-      let uniqParams = uniqArray(Array.from(items).map(function(item) {
+  scrollWatcherConstructor(items2) {
+    if (items2.length) {
+      let uniqParams = uniqArray(Array.from(items2).map(function(item) {
         if (item.dataset.flsWatcher === "navigator" && !item.dataset.flsWatcherThreshold) {
           let valueOfThreshold;
           if (item.clientHeight > 2) {
@@ -893,7 +926,7 @@ class ScrollWatcher {
           margin: uniqParamArray[1],
           threshold: uniqParamArray[2]
         };
-        let groupItems = Array.from(items).filter(function(item) {
+        let groupItems = Array.from(items2).filter(function(item) {
           let watchRoot = item.dataset.flsWatcherRoot ? item.dataset.flsWatcherRoot : null;
           let watchMargin = item.dataset.flsWatcherMargin ? item.dataset.flsWatcherMargin : "0px";
           let watchThreshold = item.dataset.flsWatcherThreshold ? item.dataset.flsWatcherThreshold : 0;
@@ -936,9 +969,9 @@ class ScrollWatcher {
     }, configWatcher);
   }
   // Функція ініціалізації спостерігача зі своїми налаштуваннями
-  scrollWatcherInit(items, configWatcher) {
+  scrollWatcherInit(items2, configWatcher) {
     this.scrollWatcherCreate(configWatcher);
-    items.forEach((item) => this.observer.observe(item));
+    items2.forEach((item) => this.observer.observe(item));
   }
   // Функція обробки базових дій точок спрацьовування
   scrollWatcherIntersecting(entry, targetElement) {
