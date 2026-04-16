@@ -37,11 +37,11 @@ btnService.forEach((btn) => {
     const listService = item.querySelector(".content__wrap");
     const btnCloseService = item.querySelector(".content__close-service");
     btnCloseService.classList.add("visible");
-    styleInfo.classList.add("box-hidden");
+    styleInfo.classList.add("content__hidden-box--box-hidden");
     listService.classList.add("content-hidden");
     const closeHandler = () => {
       btnCloseService.classList.remove("visible");
-      styleInfo.classList.remove("box-hidden");
+      styleInfo.classList.remove("content__hidden-box--box-hidden");
       listService.classList.remove("content-hidden");
       styleInfo.classList.add("slow-transition");
       setTimeout(() => {
@@ -56,6 +56,7 @@ const items = document.querySelectorAll(".content__item");
 if (window.matchMedia("(hover: none)").matches) {
   items.forEach((item) => {
     item.addEventListener("click", () => {
+      console.log("1111");
       items.forEach((el) => el.classList.remove("active"));
       item.classList.add("active");
     });

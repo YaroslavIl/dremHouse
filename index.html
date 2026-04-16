@@ -5,9 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1776337131324"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1776337131324">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1776337131324">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1776348195644"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1776348195644">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1776348195644">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -21,7 +21,7 @@
 				<div data-fls-index="" class="index">
 					<div data-fls-fullpage="" data-fls-fullpage-bullets="" class="fullpage">
 						<section data-fls-fullpage-section="" class="fullpage__section">
-							<div data-fls-sidepanel="" class="sidepanel sidepanel--loader" =""="">
+							<div data-fls-sidepanel="" class="sidepanel sidepanel--loader">
 								<div data-fls-dynamic=".customheader__menu--one, 768, 0" class="sidepanel__logo--one">
 									<img src="./assets/img/logo.svg" alt="лого сайту" class="sidepanel__img">
 								</div>
@@ -42,7 +42,7 @@
 									</a>
 								</div>
 							</div>
-							<div data-fls-customheader="" class="customheader">
+							<div data-fls-customheader="" class="customheader start">
 								<div class="customheader__container">
 									<div class="customheader__menu--one">
 										<section data-fls-custommenu="" class="custommenu menu">
@@ -103,21 +103,57 @@
 </div>
 -->
 						<section data-fls-watcher-threshold="1" data-fls-watcher="" data-fls-watcher-once="" data-fls-fullpage-section="" class="fullpage__section">
-							<!--
-<include src="@components/custom/sidepanel/sidepanel.html" locals='
-{
-"sidepanelLogo": "sidepanel__logo--two",
-"customheaderMenuDynamic": "customheader__menu--two",
-"sidepanelMod": "sidepanel--watcher",
-"sidepanelWatcher": "data-fls-watcher"
-}
-'></include>
-<include src="@components/custom/customheader/customheader.html" locals='
-{
-"customheaderMenu": "customheader__menu--two"
-}
-'></include>
--->
+							<div data-fls-sidepanel="" class="sidepanel sidepanel--watcher">
+								<div data-fls-dynamic=".customheader__menu--two, 768, 0" class="sidepanel__logo--two">
+									<img src="./assets/img/logo.svg" alt="лого сайту" class="sidepanel__img">
+								</div>
+								<p class="sidepanel__text">apartment renovation</p>
+								<span class="sidepanel__decor"></span>
+								<div class="sidepanel__social">
+									<a href="#" target="_blank" rel="noopener noreferrer" class="sidepanel__item">
+										<img src="./assets/img/socialIcon/facebook.svg" alt="facebookIcon">
+									</a>
+									<a href="#" target="_blank" rel="noopener noreferrer" class="sidepanel__item">
+										<img src="./assets/img/socialIcon/Instagram.svg" alt="InstagraIcon">
+									</a>
+									<a href="#" target="_blank" rel="noopener noreferrer" class="sidepanel__item">
+										<img src="./assets/img/socialIcon/telegram.svg" alt="telegramIcon">
+									</a>
+									<a href="#" target="_blank" rel="noopener noreferrer" class="sidepanel__item">
+										<img src="./assets/img/socialIcon/youtube.svg" alt="youtubeIcon">
+									</a>
+								</div>
+							</div>
+							<div data-fls-customheader="" class="customheader hidden">
+								<div class="customheader__container">
+									<div class="customheader__menu--two">
+										<section data-fls-custommenu="" class="custommenu menu">
+											<button type="button" data-fls-menu="" class="menu__icon icon-menu">
+												<span></span>
+											</button>
+											<nav class="menu__body">
+												<ul class="menu__list"></ul>
+											</nav>
+										</section>
+										<div class="tel">
+											<a class="tel__link" href="tel:+380765475123">+38 (097) 987 78 88</a>
+										</div>
+									</div>
+									<div class="call">
+										<a class="call__link" href="#">request for a call</a>
+										<div data-fls-iconphone="" class="iconphone">
+											<a href="#" class="phone">
+												<div class="phone__big-circle"></div>
+												<div class="phone__medium-circle"></div>
+												<div class="phone__small-circle"></div>
+												<div class="phone__inner">
+													<img src="./assets/img/phone.svg" alt="phone" class="phone__img">
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
 							<div data-fls-projectform="" class="projectform">
 								<form class="projectform__form form" data-fls-form="" action="#" method="post">
 									<input data-fls-input="" autocomplete="name" type="text" name="form[]" data-error="Помилка" required placeholder="Your name" aria-label="Your name" class="form__name input">
@@ -137,24 +173,84 @@
 									<source media="(max-width: 1200px)" srcset="./assets/img/section2-1200.webp" type="image/webp">
 									<img class="fullpage__pic" alt="Image" src="./assets/img/section2.webp">
 								</picture>
+								<div class="fullpage__statistics statistics">
+									<h2 class="statistics__title">elite renovation of your apartment</h2>
+									<div class="statistics__info">
+										<div class="statistics__card">
+											<span>18</span>
+											<p>years on the market</p>
+										</div>
+										<div class="statistics__card">
+											<span>237</span>
+											<p>completed projects</p>
+										</div>
+										<div class="statistics__card">
+											<span>50</span>
+											<p>employees</p>
+										</div>
+									</div>
+									<div class="statistics__inner-btn">
+										<button class="statistics__btn" type="button">more info about us</button>
+										<div class="statistics__decor decor">
+											<div class="decor__item"></div>
+											<div class="decor__arrow decor__arrow--icon-arrow"></div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</section>
-						<section data-fls-fullpage-section="" class="fullpage__section">
-							<!--
-<include src="@components/custom/sidepanel/sidepanel.html" locals='
-{
-"sidepanelLogo": "sidepanel__logo--three",
-"customheaderMenuDynamic": "customheader__menu--three",
-"sidepanelMod": "sidepanel--watcher",
-"sidepanelWatcher": "data-fls-watcher"
-}
-'></include>
-<include src="@components/custom/customheader/customheader.html" locals='
-{
-"customheaderMenu": "customheader__menu--three"
-}
-'></include>
--->
+						<section data-fls-watcher-threshold="1" data-fls-watcher="" data-fls-watcher-once="" data-fls-fullpage-section="" class="fullpage__section">
+							<div data-fls-sidepanel="" class="sidepanel sidepanel--watcher">
+								<div data-fls-dynamic=".customheader__menu--three, 768, 0" class="sidepanel__logo--three">
+									<img src="./assets/img/logo.svg" alt="лого сайту" class="sidepanel__img">
+								</div>
+								<p class="sidepanel__text">apartment renovation</p>
+								<span class="sidepanel__decor"></span>
+								<div class="sidepanel__social">
+									<a href="#" target="_blank" rel="noopener noreferrer" class="sidepanel__item">
+										<img src="./assets/img/socialIcon/facebook.svg" alt="facebookIcon">
+									</a>
+									<a href="#" target="_blank" rel="noopener noreferrer" class="sidepanel__item">
+										<img src="./assets/img/socialIcon/Instagram.svg" alt="InstagraIcon">
+									</a>
+									<a href="#" target="_blank" rel="noopener noreferrer" class="sidepanel__item">
+										<img src="./assets/img/socialIcon/telegram.svg" alt="telegramIcon">
+									</a>
+									<a href="#" target="_blank" rel="noopener noreferrer" class="sidepanel__item">
+										<img src="./assets/img/socialIcon/youtube.svg" alt="youtubeIcon">
+									</a>
+								</div>
+							</div>
+							<div data-fls-customheader="" class="customheader hidden">
+								<div class="customheader__container">
+									<div class="customheader__menu--three">
+										<section data-fls-custommenu="" class="custommenu menu">
+											<button type="button" data-fls-menu="" class="menu__icon icon-menu">
+												<span></span>
+											</button>
+											<nav class="menu__body">
+												<ul class="menu__list"></ul>
+											</nav>
+										</section>
+										<div class="tel">
+											<a class="tel__link" href="tel:+380765475123">+38 (097) 987 78 88</a>
+										</div>
+									</div>
+									<div class="call">
+										<a class="call__link" href="#">request for a call</a>
+										<div data-fls-iconphone="" class="iconphone">
+											<a href="#" class="phone">
+												<div class="phone__big-circle"></div>
+												<div class="phone__medium-circle"></div>
+												<div class="phone__small-circle"></div>
+												<div class="phone__inner">
+													<img src="./assets/img/phone.svg" alt="phone" class="phone__img">
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
 							<div class="fullpage__content content">
 								<div class="content__item">
 									<div class="content__img">
