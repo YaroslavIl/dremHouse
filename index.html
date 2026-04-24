@@ -5,9 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1776348195644"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1776348195644">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1776348195644">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1777035527261"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1777035527261">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1777035527261">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -21,6 +21,7 @@
 				<div data-fls-index="" class="index">
 					<div data-fls-fullpage="" data-fls-fullpage-bullets="" class="fullpage">
 						<section data-fls-fullpage-section="" class="fullpage__section">
+							<!-- section-1 -->
 							<div data-fls-sidepanel="" class="sidepanel sidepanel--loader">
 								<div data-fls-dynamic=".customheader__menu--one, 768, 0" class="sidepanel__logo--one">
 									<img src="./assets/img/logo.svg" alt="лого сайту" class="sidepanel__img">
@@ -42,7 +43,7 @@
 									</a>
 								</div>
 							</div>
-							<div data-fls-customheader="" class="customheader start">
+							<div data-fls-customheader="" class="customheader start customheader--loader">
 								<div class="customheader__container">
 									<div class="customheader__menu--one">
 										<section data-fls-custommenu="" class="custommenu menu">
@@ -72,7 +73,7 @@
 									</div>
 								</div>
 							</div>
-							<div data-fls-projectform="" class="projectform">
+							<div data-fls-projectform="" class="projectform projectform--loader">
 								<form class="projectform__form form" data-fls-form="" action="#" method="post">
 									<input data-fls-input="" autocomplete="name" type="text" name="form[]" data-error="Помилка" required placeholder="Your name" aria-label="Your name" class="form__name input">
 									<input data-fls-input="" autocomplete="tel" type="tel" name="form[]" data-error="Помилка" required placeholder="Your phone number" aria-label="Your phone number" class="form__tel input">
@@ -102,7 +103,59 @@
 <include src="@components/custom/projectform/projectform.html"></include>
 </div>
 -->
-						<section data-fls-watcher-threshold="1" data-fls-watcher="" data-fls-watcher-once="" data-fls-fullpage-section="" class="fullpage__section">
+						<section data-fls-watcher-threshold="1" data-fls-watcher="" data-fls-watcher-once="" data-fls-fullpage-section="" class="fullpage__section fullpage__section--none">
+							<!-- section-2 -->
+							<div data-fls-popup="popup" aria-hidden="true" class="popup">
+								<div data-fls-popup-wrapper="" class="popup__wrapper">
+									<div data-fls-popup-body="" class="popup__body">
+										<button data-fls-popup-close="" type="button" class="popup__close">
+											<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square"></path>
+												<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square"></path>
+											</svg>
+										</button>
+										<div data-fls-popup-content="" class="popup__text"><!-- Контент --></div>
+									</div>
+								</div>
+							</div>
+							<div data-fls-fullpage-noevent="" data-fls-popup="popup-statistics" aria-hidden="true" class="popup">
+								<div data-fls-popup-wrapper="" class="popup__wrapper">
+									<div data-fls-popup-body="" class="popup__body">
+										<div data-fls-popup-content="" class="popup__text about">
+											<!-- Контент -->
+											<div class="about__big-logo">
+												<img class="about__logo" src="./assets/img/bigLogo.svg" alt="logo">
+											</div>
+											<div class="about__info">
+												<h1 class="about__title">Место для короткого слогана здесь Место для короткого слогана здесь</h1>
+												<ul class="about__list">
+													<li class="about__item">
+														<h2 class="about__subtitle">Место для подзаголовка</h2>
+														<p>
+															<span>Значимость этих проблем настолько очевидна,</span>
+															что новая модель организационной деятельности способствует подготовки и реализации форм развития. Не следует, однако забывать, что рамки и место обучения кадров способствует подготовки и реализации новых предложений. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения соответствующий условий активизации.
+														</p>
+													</li>
+													<li class="about__item">
+														<h2 class="about__subtitle">Место для подзаголовка</h2>
+														<p>
+															<span>Значимость этих проблем настолько очевидна,</span>
+															что новая модель организационной деятельности способствует подготовки и реализации форм развития. Не следует, однако забывать, что рамки и место обучения кадров способствует подготовки и реализации новых предложений. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения соответствующий условий активизации.
+														</p>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="about__inner-btn">
+											<button data-fls-popup-close="" type="button" class="about__btn">go back to the main one</button>
+											<div class="about__decor">
+												<div class="about__line"></div>
+												<div class="about__arrow about__arrow--icon-arrow"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 							<div data-fls-sidepanel="" class="sidepanel sidepanel--watcher">
 								<div data-fls-dynamic=".customheader__menu--two, 768, 0" class="sidepanel__logo--two">
 									<img src="./assets/img/logo.svg" alt="лого сайту" class="sidepanel__img">
@@ -124,7 +177,7 @@
 									</a>
 								</div>
 							</div>
-							<div data-fls-customheader="" class="customheader hidden">
+							<div data-fls-customheader="" class="customheader hidden customheader--watcher">
 								<div class="customheader__container">
 									<div class="customheader__menu--two">
 										<section data-fls-custommenu="" class="custommenu menu">
@@ -154,7 +207,7 @@
 									</div>
 								</div>
 							</div>
-							<div data-fls-projectform="" class="projectform">
+							<div data-fls-projectform="" class="projectform projectform--watcher">
 								<form class="projectform__form form" data-fls-form="" action="#" method="post">
 									<input data-fls-input="" autocomplete="name" type="text" name="form[]" data-error="Помилка" required placeholder="Your name" aria-label="Your name" class="form__name input">
 									<input data-fls-input="" autocomplete="tel" type="tel" name="form[]" data-error="Помилка" required placeholder="Your phone number" aria-label="Your phone number" class="form__tel input">
@@ -175,31 +228,32 @@
 								</picture>
 								<div class="fullpage__statistics statistics">
 									<h2 class="statistics__title">elite renovation of your apartment</h2>
-									<div class="statistics__info">
+									<div data-fls-watcher="" class="statistics__info">
 										<div class="statistics__card">
-											<span>18</span>
+											<span data-fls-digcounter="" data-fls-digcounter-speed="1500">18</span>
 											<p>years on the market</p>
 										</div>
 										<div class="statistics__card">
-											<span>237</span>
+											<span data-fls-digcounter="" data-fls-digcounter-speed="1000">237</span>
 											<p>completed projects</p>
 										</div>
 										<div class="statistics__card">
-											<span>50</span>
+											<span data-fls-digcounter="" data-fls-digcounter-speed="1300">50</span>
 											<p>employees</p>
 										</div>
 									</div>
-									<div class="statistics__inner-btn">
-										<button class="statistics__btn" type="button">more info about us</button>
-										<div class="statistics__decor decor">
-											<div class="decor__item"></div>
-											<div class="decor__arrow decor__arrow--icon-arrow"></div>
-										</div>
+								</div>
+								<div data-fls-popup-link="popup-statistics" class="statistics__inner-btn">
+									<button class="statistics__btn" type="button">more info about us</button>
+									<div class="statistics__decor">
+										<div class="statistics__item"></div>
+										<div class="statistics__arrow statistics__arrow--icon-arrow"></div>
 									</div>
 								</div>
 							</div>
 						</section>
 						<section data-fls-watcher-threshold="1" data-fls-watcher="" data-fls-watcher-once="" data-fls-fullpage-section="" class="fullpage__section">
+							<!-- section-3 -->
 							<div data-fls-sidepanel="" class="sidepanel sidepanel--watcher">
 								<div data-fls-dynamic=".customheader__menu--three, 768, 0" class="sidepanel__logo--three">
 									<img src="./assets/img/logo.svg" alt="лого сайту" class="sidepanel__img">
@@ -221,7 +275,7 @@
 									</a>
 								</div>
 							</div>
-							<div data-fls-customheader="" class="customheader hidden">
+							<div data-fls-customheader="" class="customheader hidden customheader--watcher">
 								<div class="customheader__container">
 									<div class="customheader__menu--three">
 										<section data-fls-custommenu="" class="custommenu menu">
