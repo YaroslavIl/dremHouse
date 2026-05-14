@@ -5,9 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1777394490404"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1777394490404">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1777394490404">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1778757079930"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1778757079930">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1778757079930">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -112,6 +112,7 @@
 									</div>
 									<div class="call">
 										<button data-fls-popup-link="popup-call" type="button" class="call__link">request for a call</button>
+										<!-- <include src="@components/custom/iconphone/iconphone.html"></include> -->
 										<div data-fls-iconphone="" class="iconphone">
 											<a data-fls-popup-link="popup-call" href="#" class="phone">
 												<div class="phone__big-circle"></div>
@@ -247,6 +248,7 @@
 									</div>
 									<div class="call">
 										<button data-fls-popup-link="popup-call" type="button" class="call__link">request for a call</button>
+										<!-- <include src="@components/custom/iconphone/iconphone.html"></include> -->
 										<div data-fls-iconphone="" class="iconphone">
 											<a data-fls-popup-link="popup-call" href="#" class="phone">
 												<div class="phone__big-circle"></div>
@@ -305,7 +307,7 @@
 								</div>
 							</div>
 						</section>
-						<section data-fls-watcher-threshold="1" data-fls-watcher="" data-fls-watcher-once="" data-fls-fullpage-section="" class="fullpage__section">
+						<section data-fls-watcher-threshold="1" data-fls-watcher="" data-fls-watcher-once="" data-fls-fullpage-section="" class="fullpage__section fullpage__section--show">
 							<!-- section-3 -->
 							<div data-fls-sidepanel="" class="sidepanel sidepanel--watcher">
 								<div data-fls-dynamic=".customheader__menu--three, 768, 0" class="sidepanel__logo--three">
@@ -397,6 +399,7 @@
 									</div>
 									<div class="call">
 										<button data-fls-popup-link="popup-call" type="button" class="call__link">request for a call</button>
+										<!-- <include src="@components/custom/iconphone/iconphone.html"></include> -->
 										<div data-fls-iconphone="" class="iconphone">
 											<a data-fls-popup-link="popup-call" href="#" class="phone">
 												<div class="phone__big-circle"></div>
@@ -461,7 +464,7 @@
 										<p data-fls-fullpage-noevent="">
 											THE Elite STYLE INCLUDES AN EXTENDED SET OF WORKS. SUITABLE FOR THOSE WHO WANTS TO GET THE PERFECT RESULT.
 										</p>
-										<a href="#" class="content__link">
+										<a href="#" class="content__link content__link--open">
 											gallery
 											<div class="link-decor">
 												<span class="line-decor"></span>
@@ -527,7 +530,7 @@
 										<p data-fls-fullpage-noevent="">
 											THE VIP STYLE INCLUDES AN EXTENDED SET OF WORKS. SUITABLE FOR THOSE WHO WANTS TO GET THE PERFECT RESULT. THE VIP STYLE INCLUDES AN EXTENDED SET OF WORKS. SUITABLE FOR THOSE WHO WANTS TO GET THE PERFECT RESULT.THE VIP STYLE INCLUDES AN EXTENDED SET OF WORKS. SUITABLE FOR THOSE WHO WANTS TO GET THE PERFECT RESULT.
 										</p>
-										<a href="#" class="content__link">
+										<a href="#" class="content__link content__link--open">
 											gallery
 											<div class="link-decor">
 												<span class="line-decor"></span>
@@ -592,7 +595,7 @@
 										<p data-fls-fullpage-noevent="">
 											THE Extra STYLE INCLUDES AN EXTENDED SET OF WORKS. SUITABLE FOR THOSE WHO WANTS TO GET THE PERFECT RESULT.
 										</p>
-										<a href="#" class="content__link">
+										<a href="#" class="content__link content__link--open">
 											gallery
 											<div class="link-decor">
 												<span class="line-decor"></span>
@@ -609,6 +612,379 @@
 									</div>
 								</div>
 								<!-- <img class="fullpage__pic" src="@img/section2.jpg" alt="Image"> -->
+							</div>
+							<div class="fullpage__hidden-block hidden-block">
+								<button type="button" class="hidden-block__btn hidden-block__btn--icon-arrow">
+									<span></span>
+									back to styles
+								</button>
+								<button type="button" class="hidden-block__btn-table">
+									<span></span>
+								</button>
+								<!-- Оболонка слайдера -->
+								<div data-fls-slider="" class="hidden-block__slider swiper">
+									<div data-fls-projectform="" class="projectform projectform--watcher">
+										<form class="projectform__form form" data-fls-form="dev" action="#" method="post">
+											<input data-fls-form-validatenow="" data-fls-input="" autocomplete="name" type="text" name="form[]" data-error="Помилка" required placeholder="Your name" aria-label="Your name" class="form__name input">
+											<input data-fls-form-validatenow="" data-fls-form-errtext="Помилка номеру телефону" data-fls-input="" autocomplete="tel" data-fls-input-mask="+38(999) 999-9999" type="tel" name="form[]" data-error="Помилка" required placeholder="Your phone number" aria-label="Your phone number" class="form__tel input">
+											<div class="form__inner-btn">
+												<button class="form__btn" type="submit">discuss a project</button>
+												<div class="form__decor decor">
+													<div class="decor__item"></div>
+													<div class="decor__arrow decor__arrow--icon-arrow"></div>
+												</div>
+											</div>
+										</form>
+									</div>
+									<!-- Частина слайдера, що рухається -->
+									<div class="hidden-block__wrapper swiper-wrapper">
+										<!-- Слайд -->
+										<div class="hidden-block__slide swiper-slide">
+											<picture>
+												<source media="(max-width: 600px)" srcset="./assets/img/section3/extraSlider/ekstra1-600.webp" type="image/webp">
+												<source media="(max-width: 1200px)" srcset="./assets/img/section3/extraSlider/ekstra1-1200.webp" type="image/webp">
+												<img alt="стильна кімната" class="hidden-block__img" src="./assets/img/section3/extraSlider/ekstra1.webp">
+											</picture>
+											<div class="hidden-block__info-item anim">
+												<!-- up-right -->
+												<div class="anim__inner">
+													<p class="anim__text">Монтаж смесителей</p>
+													<svg class="anim__svg" width="324" height="70" viewbox="0 0 324 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<!-- ГРУПА ПУЛЬСУЮЧИХ КІЛ -->
+														<g class="anim__circles">
+															<circle cx="23.5" cy="46.5" r="7" fill="#FFAC30"></circle>
+															<path class="circle-mid" d="M16.5 46.5C16.5 42.634 19.634 39.5 23.5 39.5C27.366 39.5 30.5 42.634 30.5 46.5C30.5 50.366 27.366 53.5 23.5 53.5C19.634 53.5 16.5 50.366 16.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.5"></path>
+															<path class="circle-outer" d="M8.5 46.5C8.5 38.2157 15.2157 31.5 23.5 31.5C31.7843 31.5 38.5 38.2157 38.5 46.5C38.5 54.7843 31.7843 61.5 23.5 61.5C15.2157 61.5 8.5 54.7843 8.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.3"></path>
+															<path class="circle-max" d="M0.5 46.5C0.5 33.7975 10.7974 23.5 23.5 23.5C36.2025 23.5 46.5 33.7975 46.5 46.5C46.5 59.2026 36.2025 69.5 23.5 69.5C10.7975 69.5 0.5 59.2026 0.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.1"></path>
+														</g>
+														<!-- ЛІНІЯ (з довжиною 280) -->
+														<g class="anim__line">
+															<path class="path-diagonal" d="M23.3022 46.0792L94.3374 5.06699" stroke="#FFAC30"></path>
+															<path class="path-horizontal" d="M94.5 5H314.5" stroke="#FFAC30"></path>
+															<path class="path-end-circle" d="M314.5 5C314.5 2.51472 316.515 0.5 319 0.5C321.485 0.5 323.5 2.51472 323.5 5C323.5 7.48528 321.485 9.5 319 9.5C316.515 9.5 314.5 7.48528 314.5 5Z" stroke="#FFAC30"></path>
+														</g>
+													</svg>
+												</div>
+											</div>
+											<div class="hidden-block__info-item hidden-block__info-item--1 anim">
+												<!-- up-right -->
+												<div class="anim__inner">
+													<p class="anim__text">Финишная отделка пола</p>
+													<svg class="anim__svg" width="324" height="70" viewbox="0 0 324 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<!-- ГРУПА ПУЛЬСУЮЧИХ КІЛ -->
+														<g class="anim__circles">
+															<circle cx="23.5" cy="46.5" r="7" fill="#FFAC30"></circle>
+															<path class="circle-mid" d="M16.5 46.5C16.5 42.634 19.634 39.5 23.5 39.5C27.366 39.5 30.5 42.634 30.5 46.5C30.5 50.366 27.366 53.5 23.5 53.5C19.634 53.5 16.5 50.366 16.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.5"></path>
+															<path class="circle-outer" d="M8.5 46.5C8.5 38.2157 15.2157 31.5 23.5 31.5C31.7843 31.5 38.5 38.2157 38.5 46.5C38.5 54.7843 31.7843 61.5 23.5 61.5C15.2157 61.5 8.5 54.7843 8.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.3"></path>
+															<path class="circle-max" d="M0.5 46.5C0.5 33.7975 10.7974 23.5 23.5 23.5C36.2025 23.5 46.5 33.7975 46.5 46.5C46.5 59.2026 36.2025 69.5 23.5 69.5C10.7975 69.5 0.5 59.2026 0.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.1"></path>
+														</g>
+														<!-- ЛІНІЯ (з довжиною 280) -->
+														<g class="anim__line">
+															<path class="path-diagonal" d="M23.3022 46.0792L94.3374 5.06699" stroke="#FFAC30"></path>
+															<path class="path-horizontal" d="M94.5 5H314.5" stroke="#FFAC30"></path>
+															<path class="path-end-circle" d="M314.5 5C314.5 2.51472 316.515 0.5 319 0.5C321.485 0.5 323.5 2.51472 323.5 5C323.5 7.48528 321.485 9.5 319 9.5C316.515 9.5 314.5 7.48528 314.5 5Z" stroke="#FFAC30"></path>
+														</g>
+													</svg>
+												</div>
+											</div>
+											<div class="hidden-block__info-item hidden-block__info-item--2 anim">
+												<!-- down-right -->
+												<div class="anim__inner">
+													<svg class="anim__svg" width="328" height="75" viewbox="0 0 328 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g class="anim__circles">
+															<circle cx="23.5" cy="46.5" r="7" fill="#FFAC30"></circle>
+															<path class="circle-mid" d="M16.5 46.5C16.5 42.634 19.634 39.5 23.5 39.5C27.366 39.5 30.5 42.634 30.5 46.5C30.5 50.366 27.366 53.5 23.5 53.5C19.634 53.5 16.5 50.366 16.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.5"></path>
+															<path class="circle-outer" d="M8.5 46.5C8.5 38.2157 15.2157 31.5 23.5 31.5C31.7843 31.5 38.5 38.2157 38.5 46.5C38.5 54.7843 31.7843 61.5 23.5 61.5C15.2157 61.5 8.5 54.7843 8.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.3"></path>
+															<path class="circle-max" d="M0.5 46.5C0.5 33.7975 10.7974 23.5 23.5 23.5C36.2025 23.5 46.5 33.7975 46.5 46.5C46.5 59.2026 36.2025 69.5 23.5 69.5C10.7975 69.5 0.5 59.2026 0.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.1"></path>
+														</g>
+														<g class="anim__line">
+															<path class="path-diagonal" d="M23.5 46.5L94.5 65" stroke="#FFAC30"></path>
+															<path class="path-horizontal" d="M94.5 65H314.5" stroke="#FFAC30"></path>
+															<path class="path-end-circle" d="M314.5 65C314.5 62.5147 316.515 60.5 319 60.5C321.485 60.5 323.5 62.5147 323.5 65C323.5 67.4853 321.485 69.5 319 69.5C316.515 69.5 314.5 67.4853 314.5 65Z" stroke="#FFAC30"></path>
+														</g>
+													</svg>
+													<p class="anim__text anim__text--down">Финишная отделка стен</p>
+												</div>
+											</div>
+											<div class="hidden-block__info-item hidden-block__info-item--3 anim">
+												<!-- down-left -->
+												<div class="anim__inner">
+													<svg class="anim__svg" width="324" height="75" viewbox="0 0 324 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g class="anim__circles anim__circles--right">
+															<circle cx="300.5" cy="23.5" r="7" fill="#FFAC30"></circle>
+															<path class="circle-mid" d="M293.5 23.5C293.5 19.634 296.634 16.5 300.5 16.5C304.366 16.5 307.5 19.634 307.5 23.5C307.5 27.366 304.366 30.5 300.5 30.5C296.634 30.5 293.5 27.366 293.5 23.5Z" stroke="#FFAC30" stroke-opacity="0.5"></path>
+															<path class="circle-outer" d="M285.5 23.5C285.5 15.2157 292.216 8.5 300.5 8.5C308.784 8.5 315.5 15.2157 315.5 23.5C315.5 31.7843 308.784 38.5 300.5 38.5C292.216 38.5 285.5 31.7843 285.5 23.5Z" stroke="#FFAC30" stroke-opacity="0.3"></path>
+															<path class="circle-max" d="M277.5 23.5C277.5 10.7975 287.797 0.5 300.5 0.5C313.203 0.5 323.5 10.7975 323.5 23.5C323.5 36.2026 313.203 46.5 300.5 46.5C287.797 46.5 277.5 36.2026 277.5 23.5Z" stroke="#FFAC30" stroke-opacity="0.1"></path>
+														</g>
+														<g class="anim__line">
+															<path class="path-diagonal" d="M300.5 23.5L229.5 65" stroke="#FFAC30"></path>
+															<path class="path-horizontal" d="M229.5 65H5" stroke="#FFAC30"></path>
+															<path class="path-end-circle" d="M9.5 65C9.5 67.4853 7.48528 69.5 5 69.5C2.51472 69.5 0.5 67.4853 0.5 65C0.5 62.5147 2.51472 60.5 5 60.5C7.48528 60.5 9.5 62.5147 9.5 65Z" stroke="#FFAC30"></path>
+														</g>
+													</svg>
+													<p class="anim__text anim__text--left">Установка межкомнатных дверей</p>
+												</div>
+											</div>
+											<div class="hidden-block__info-item hidden-block__info-item--4 anim">
+												<!-- up-left -->
+												<div class="anim__inner">
+													<p class="anim__text anim__text--up">Монтаж смесителей</p>
+													<svg class="anim__svg" width="324" height="75" viewbox="0 0 324 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g class="anim__circles">
+															<circle cx="300.5" cy="46.5" r="7" fill="#FFAC30"></circle>
+															<path class="circle-mid" d="M293.5 46.5C293.5 42.634 296.634 39.5 300.5 39.5C304.366 39.5 307.5 42.634 307.5 46.5C307.5 50.366 304.366 53.5 300.5 53.5C296.634 53.5 293.5 50.366 293.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.5"></path>
+															<path class="circle-outer" d="M285.5 46.5C285.5 38.2157 292.216 31.5 300.5 31.5C308.784 31.5 315.5 38.2157 315.5 46.5C315.5 54.7843 308.784 61.5 300.5 61.5C292.216 61.5 285.5 54.7843 285.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.3"></path>
+															<path class="circle-max" d="M277.5 46.5C277.5 33.7975 287.797 23.5 300.5 23.5C313.203 23.5 323.5 33.7975 323.5 46.5C323.5 59.2026 313.203 69.5 300.5 69.5C287.797 69.5 277.5 59.2026 277.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.1"></path>
+														</g>
+														<g class="anim__line">
+															<path class="path-diagonal" d="M300.5 46.5L229.5 5" stroke="#FFAC30"></path>
+															<path class="path-horizontal" d="M229.5 5H5" stroke="#FFAC30"></path>
+															<path class="path-end-circle" d="M9.5 5C9.5 7.48528 7.48528 9.5 5 9.5C2.51472 9.5 0.5 7.48528 0.5 5C0.5 2.51472 2.51472 0.5 5 0.5C7.48528 0.5 9.5 2.51472 9.5 5Z" stroke="#FFAC30"></path>
+														</g>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="hidden-block__slide swiper-slide">
+											<picture>
+												<source media="(max-width: 600px)" srcset="./assets/img/section3/extraSlider/ekstra2-600.webp" type="image/webp">
+												<source media="(max-width: 1200px)" srcset="./assets/img/section3/extraSlider/ekstra2-1200.webp" type="image/webp">
+												<img alt="стильна кімната" class="hidden-block__img" src="./assets/img/section3/extraSlider/ekstra2.webp">
+											</picture>
+											<div class="hidden-block__info-item hidden-block__info-item--5 anim">
+												<!-- up-right -->
+												<div class="anim__inner">
+													<p class="anim__text">Выведение углов 90 градусов</p>
+													<svg class="anim__svg" width="324" height="70" viewbox="0 0 324 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<!-- ГРУПА ПУЛЬСУЮЧИХ КІЛ -->
+														<g class="anim__circles">
+															<circle cx="23.5" cy="46.5" r="7" fill="#FFAC30"></circle>
+															<path class="circle-mid" d="M16.5 46.5C16.5 42.634 19.634 39.5 23.5 39.5C27.366 39.5 30.5 42.634 30.5 46.5C30.5 50.366 27.366 53.5 23.5 53.5C19.634 53.5 16.5 50.366 16.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.5"></path>
+															<path class="circle-outer" d="M8.5 46.5C8.5 38.2157 15.2157 31.5 23.5 31.5C31.7843 31.5 38.5 38.2157 38.5 46.5C38.5 54.7843 31.7843 61.5 23.5 61.5C15.2157 61.5 8.5 54.7843 8.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.3"></path>
+															<path class="circle-max" d="M0.5 46.5C0.5 33.7975 10.7974 23.5 23.5 23.5C36.2025 23.5 46.5 33.7975 46.5 46.5C46.5 59.2026 36.2025 69.5 23.5 69.5C10.7975 69.5 0.5 59.2026 0.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.1"></path>
+														</g>
+														<!-- ЛІНІЯ (з довжиною 280) -->
+														<g class="anim__line">
+															<path class="path-diagonal" d="M23.3022 46.0792L94.3374 5.06699" stroke="#FFAC30"></path>
+															<path class="path-horizontal" d="M94.5 5H314.5" stroke="#FFAC30"></path>
+															<path class="path-end-circle" d="M314.5 5C314.5 2.51472 316.515 0.5 319 0.5C321.485 0.5 323.5 2.51472 323.5 5C323.5 7.48528 321.485 9.5 319 9.5C316.515 9.5 314.5 7.48528 314.5 5Z" stroke="#FFAC30"></path>
+														</g>
+													</svg>
+												</div>
+											</div>
+											<div class="hidden-block__info-item hidden-block__info-item--6 anim">
+												<!-- up-right -->
+												<div class="anim__inner">
+													<p class="anim__text">Монтаж напольного плинтуса</p>
+													<svg class="anim__svg" width="324" height="70" viewbox="0 0 324 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<!-- ГРУПА ПУЛЬСУЮЧИХ КІЛ -->
+														<g class="anim__circles">
+															<circle cx="23.5" cy="46.5" r="7" fill="#FFAC30"></circle>
+															<path class="circle-mid" d="M16.5 46.5C16.5 42.634 19.634 39.5 23.5 39.5C27.366 39.5 30.5 42.634 30.5 46.5C30.5 50.366 27.366 53.5 23.5 53.5C19.634 53.5 16.5 50.366 16.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.5"></path>
+															<path class="circle-outer" d="M8.5 46.5C8.5 38.2157 15.2157 31.5 23.5 31.5C31.7843 31.5 38.5 38.2157 38.5 46.5C38.5 54.7843 31.7843 61.5 23.5 61.5C15.2157 61.5 8.5 54.7843 8.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.3"></path>
+															<path class="circle-max" d="M0.5 46.5C0.5 33.7975 10.7974 23.5 23.5 23.5C36.2025 23.5 46.5 33.7975 46.5 46.5C46.5 59.2026 36.2025 69.5 23.5 69.5C10.7975 69.5 0.5 59.2026 0.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.1"></path>
+														</g>
+														<!-- ЛІНІЯ (з довжиною 280) -->
+														<g class="anim__line">
+															<path class="path-diagonal" d="M23.3022 46.0792L94.3374 5.06699" stroke="#FFAC30"></path>
+															<path class="path-horizontal" d="M94.5 5H314.5" stroke="#FFAC30"></path>
+															<path class="path-end-circle" d="M314.5 5C314.5 2.51472 316.515 0.5 319 0.5C321.485 0.5 323.5 2.51472 323.5 5C323.5 7.48528 321.485 9.5 319 9.5C316.515 9.5 314.5 7.48528 314.5 5Z" stroke="#FFAC30"></path>
+														</g>
+													</svg>
+												</div>
+											</div>
+											<div class="hidden-block__info-item hidden-block__info-item--7 anim">
+												<!-- up-right -->
+												<div class="anim__inner">
+													<p class="anim__text">Помощь в подборе мебели, техники, сантехники, чистовых отделочных материалов</p>
+													<svg class="anim__svg" width="324" height="70" viewbox="0 0 324 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<!-- ГРУПА ПУЛЬСУЮЧИХ КІЛ -->
+														<g class="anim__circles">
+															<circle cx="23.5" cy="46.5" r="7" fill="#FFAC30"></circle>
+															<path class="circle-mid" d="M16.5 46.5C16.5 42.634 19.634 39.5 23.5 39.5C27.366 39.5 30.5 42.634 30.5 46.5C30.5 50.366 27.366 53.5 23.5 53.5C19.634 53.5 16.5 50.366 16.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.5"></path>
+															<path class="circle-outer" d="M8.5 46.5C8.5 38.2157 15.2157 31.5 23.5 31.5C31.7843 31.5 38.5 38.2157 38.5 46.5C38.5 54.7843 31.7843 61.5 23.5 61.5C15.2157 61.5 8.5 54.7843 8.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.3"></path>
+															<path class="circle-max" d="M0.5 46.5C0.5 33.7975 10.7974 23.5 23.5 23.5C36.2025 23.5 46.5 33.7975 46.5 46.5C46.5 59.2026 36.2025 69.5 23.5 69.5C10.7975 69.5 0.5 59.2026 0.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.1"></path>
+														</g>
+														<!-- ЛІНІЯ (з довжиною 280) -->
+														<g class="anim__line">
+															<path class="path-diagonal" d="M23.3022 46.0792L94.3374 5.06699" stroke="#FFAC30"></path>
+															<path class="path-horizontal" d="M94.5 5H314.5" stroke="#FFAC30"></path>
+															<path class="path-end-circle" d="M314.5 5C314.5 2.51472 316.515 0.5 319 0.5C321.485 0.5 323.5 2.51472 323.5 5C323.5 7.48528 321.485 9.5 319 9.5C316.515 9.5 314.5 7.48528 314.5 5Z" stroke="#FFAC30"></path>
+														</g>
+													</svg>
+												</div>
+											</div>
+											<div class="hidden-block__info-item hidden-block__info-item--8 anim">
+												<!-- up-left -->
+												<div class="anim__inner">
+													<p class="anim__text anim__text--up">
+														Укладка ламината, укладка паркетной и массивной доски с использованием двухкомпонентного клея
+													</p>
+													<svg class="anim__svg" width="324" height="75" viewbox="0 0 324 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g class="anim__circles">
+															<circle cx="300.5" cy="46.5" r="7" fill="#FFAC30"></circle>
+															<path class="circle-mid" d="M293.5 46.5C293.5 42.634 296.634 39.5 300.5 39.5C304.366 39.5 307.5 42.634 307.5 46.5C307.5 50.366 304.366 53.5 300.5 53.5C296.634 53.5 293.5 50.366 293.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.5"></path>
+															<path class="circle-outer" d="M285.5 46.5C285.5 38.2157 292.216 31.5 300.5 31.5C308.784 31.5 315.5 38.2157 315.5 46.5C315.5 54.7843 308.784 61.5 300.5 61.5C292.216 61.5 285.5 54.7843 285.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.3"></path>
+															<path class="circle-max" d="M277.5 46.5C277.5 33.7975 287.797 23.5 300.5 23.5C313.203 23.5 323.5 33.7975 323.5 46.5C323.5 59.2026 313.203 69.5 300.5 69.5C287.797 69.5 277.5 59.2026 277.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.1"></path>
+														</g>
+														<g class="anim__line">
+															<path class="path-diagonal" d="M300.5 46.5L229.5 5" stroke="#FFAC30"></path>
+															<path class="path-horizontal" d="M229.5 5H5" stroke="#FFAC30"></path>
+															<path class="path-end-circle" d="M9.5 5C9.5 7.48528 7.48528 9.5 5 9.5C2.51472 9.5 0.5 7.48528 0.5 5C0.5 2.51472 2.51472 0.5 5 0.5C7.48528 0.5 9.5 2.51472 9.5 5Z" stroke="#FFAC30"></path>
+														</g>
+													</svg>
+												</div>
+											</div>
+											<div class="hidden-block__info-item hidden-block__info-item--9 anim">
+												<!-- down-left -->
+												<div class="anim__inner">
+													<svg class="anim__svg" width="324" height="75" viewbox="0 0 324 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g class="anim__circles anim__circles--right">
+															<circle cx="300.5" cy="23.5" r="7" fill="#FFAC30"></circle>
+															<path class="circle-mid" d="M293.5 23.5C293.5 19.634 296.634 16.5 300.5 16.5C304.366 16.5 307.5 19.634 307.5 23.5C307.5 27.366 304.366 30.5 300.5 30.5C296.634 30.5 293.5 27.366 293.5 23.5Z" stroke="#FFAC30" stroke-opacity="0.5"></path>
+															<path class="circle-outer" d="M285.5 23.5C285.5 15.2157 292.216 8.5 300.5 8.5C308.784 8.5 315.5 15.2157 315.5 23.5C315.5 31.7843 308.784 38.5 300.5 38.5C292.216 38.5 285.5 31.7843 285.5 23.5Z" stroke="#FFAC30" stroke-opacity="0.3"></path>
+															<path class="circle-max" d="M277.5 23.5C277.5 10.7975 287.797 0.5 300.5 0.5C313.203 0.5 323.5 10.7975 323.5 23.5C323.5 36.2026 313.203 46.5 300.5 46.5C287.797 46.5 277.5 36.2026 277.5 23.5Z" stroke="#FFAC30" stroke-opacity="0.1"></path>
+														</g>
+														<g class="anim__line">
+															<path class="path-diagonal" d="M300.5 23.5L229.5 65" stroke="#FFAC30"></path>
+															<path class="path-horizontal" d="M229.5 65H5" stroke="#FFAC30"></path>
+															<path class="path-end-circle" d="M9.5 65C9.5 67.4853 7.48528 69.5 5 69.5C2.51472 69.5 0.5 67.4853 0.5 65C0.5 62.5147 2.51472 60.5 5 60.5C7.48528 60.5 9.5 62.5147 9.5 65Z" stroke="#FFAC30"></path>
+														</g>
+													</svg>
+													<p class="anim__text anim__text--left">Потолок натяжной EXTRA качества ("парящая" конструкция)</p>
+												</div>
+											</div>
+										</div>
+										<div class="hidden-block__slide swiper-slide">
+											<picture>
+												<source media="(max-width: 600px)" srcset="./assets/img/section3/extraSlider/ekstra3-600.webp" type="image/webp">
+												<source media="(max-width: 1200px)" srcset="./assets/img/section3/extraSlider/ekstra3-1200.webp" type="image/webp">
+												<img alt="стильна кімната" class="hidden-block__img" src="./assets/img/section3/extraSlider/ekstra3.webp">
+											</picture>
+											<div class="hidden-block__info-item hidden-block__info-item--10 anim">
+												<!-- up-right -->
+												<div class="anim__inner">
+													<p class="anim__text">Монтаж скрытого лючка ревизии с облицовкой в плитку</p>
+													<svg class="anim__svg" width="324" height="70" viewbox="0 0 324 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<!-- ГРУПА ПУЛЬСУЮЧИХ КІЛ -->
+														<g class="anim__circles">
+															<circle cx="23.5" cy="46.5" r="7" fill="#FFAC30"></circle>
+															<path class="circle-mid" d="M16.5 46.5C16.5 42.634 19.634 39.5 23.5 39.5C27.366 39.5 30.5 42.634 30.5 46.5C30.5 50.366 27.366 53.5 23.5 53.5C19.634 53.5 16.5 50.366 16.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.5"></path>
+															<path class="circle-outer" d="M8.5 46.5C8.5 38.2157 15.2157 31.5 23.5 31.5C31.7843 31.5 38.5 38.2157 38.5 46.5C38.5 54.7843 31.7843 61.5 23.5 61.5C15.2157 61.5 8.5 54.7843 8.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.3"></path>
+															<path class="circle-max" d="M0.5 46.5C0.5 33.7975 10.7974 23.5 23.5 23.5C36.2025 23.5 46.5 33.7975 46.5 46.5C46.5 59.2026 36.2025 69.5 23.5 69.5C10.7975 69.5 0.5 59.2026 0.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.1"></path>
+														</g>
+														<!-- ЛІНІЯ (з довжиною 280) -->
+														<g class="anim__line">
+															<path class="path-diagonal" d="M23.3022 46.0792L94.3374 5.06699" stroke="#FFAC30"></path>
+															<path class="path-horizontal" d="M94.5 5H314.5" stroke="#FFAC30"></path>
+															<path class="path-end-circle" d="M314.5 5C314.5 2.51472 316.515 0.5 319 0.5C321.485 0.5 323.5 2.51472 323.5 5C323.5 7.48528 321.485 9.5 319 9.5C316.515 9.5 314.5 7.48528 314.5 5Z" stroke="#FFAC30"></path>
+														</g>
+													</svg>
+												</div>
+											</div>
+											<div class="hidden-block__info-item hidden-block__info-item--11 anim">
+												<!-- up-right -->
+												<div class="anim__inner">
+													<p class="anim__text">Монтаж водопровода и канализации (трубы Rehau, материалы класса EXTRA)</p>
+													<svg class="anim__svg" width="324" height="70" viewbox="0 0 324 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<!-- ГРУПА ПУЛЬСУЮЧИХ КІЛ -->
+														<g class="anim__circles">
+															<circle cx="23.5" cy="46.5" r="7" fill="#FFAC30"></circle>
+															<path class="circle-mid" d="M16.5 46.5C16.5 42.634 19.634 39.5 23.5 39.5C27.366 39.5 30.5 42.634 30.5 46.5C30.5 50.366 27.366 53.5 23.5 53.5C19.634 53.5 16.5 50.366 16.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.5"></path>
+															<path class="circle-outer" d="M8.5 46.5C8.5 38.2157 15.2157 31.5 23.5 31.5C31.7843 31.5 38.5 38.2157 38.5 46.5C38.5 54.7843 31.7843 61.5 23.5 61.5C15.2157 61.5 8.5 54.7843 8.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.3"></path>
+															<path class="circle-max" d="M0.5 46.5C0.5 33.7975 10.7974 23.5 23.5 23.5C36.2025 23.5 46.5 33.7975 46.5 46.5C46.5 59.2026 36.2025 69.5 23.5 69.5C10.7975 69.5 0.5 59.2026 0.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.1"></path>
+														</g>
+														<!-- ЛІНІЯ (з довжиною 280) -->
+														<g class="anim__line">
+															<path class="path-diagonal" d="M23.3022 46.0792L94.3374 5.06699" stroke="#FFAC30"></path>
+															<path class="path-horizontal" d="M94.5 5H314.5" stroke="#FFAC30"></path>
+															<path class="path-end-circle" d="M314.5 5C314.5 2.51472 316.515 0.5 319 0.5C321.485 0.5 323.5 2.51472 323.5 5C323.5 7.48528 321.485 9.5 319 9.5C316.515 9.5 314.5 7.48528 314.5 5Z" stroke="#FFAC30"></path>
+														</g>
+													</svg>
+												</div>
+											</div>
+											<div class="hidden-block__info-item hidden-block__info-item--12 anim">
+												<!-- down-left -->
+												<div class="anim__inner">
+													<svg class="anim__svg" width="324" height="75" viewbox="0 0 324 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g class="anim__circles anim__circles--right">
+															<circle cx="300.5" cy="23.5" r="7" fill="#FFAC30"></circle>
+															<path class="circle-mid" d="M293.5 23.5C293.5 19.634 296.634 16.5 300.5 16.5C304.366 16.5 307.5 19.634 307.5 23.5C307.5 27.366 304.366 30.5 300.5 30.5C296.634 30.5 293.5 27.366 293.5 23.5Z" stroke="#FFAC30" stroke-opacity="0.5"></path>
+															<path class="circle-outer" d="M285.5 23.5C285.5 15.2157 292.216 8.5 300.5 8.5C308.784 8.5 315.5 15.2157 315.5 23.5C315.5 31.7843 308.784 38.5 300.5 38.5C292.216 38.5 285.5 31.7843 285.5 23.5Z" stroke="#FFAC30" stroke-opacity="0.3"></path>
+															<path class="circle-max" d="M277.5 23.5C277.5 10.7975 287.797 0.5 300.5 0.5C313.203 0.5 323.5 10.7975 323.5 23.5C323.5 36.2026 313.203 46.5 300.5 46.5C287.797 46.5 277.5 36.2026 277.5 23.5Z" stroke="#FFAC30" stroke-opacity="0.1"></path>
+														</g>
+														<g class="anim__line">
+															<path class="path-diagonal" d="M300.5 23.5L229.5 65" stroke="#FFAC30"></path>
+															<path class="path-horizontal" d="M229.5 65H5" stroke="#FFAC30"></path>
+															<path class="path-end-circle" d="M9.5 65C9.5 67.4853 7.48528 69.5 5 69.5C2.51472 69.5 0.5 67.4853 0.5 65C0.5 62.5147 2.51472 60.5 5 60.5C7.48528 60.5 9.5 62.5147 9.5 65Z" stroke="#FFAC30"></path>
+														</g>
+													</svg>
+													<p class="anim__text anim__text--left">Монтаж системы контроля протечек воды</p>
+												</div>
+											</div>
+											<div class="hidden-block__info-item hidden-block__info-item--13 anim">
+												<!-- up-left -->
+												<div class="anim__inner">
+													<p class="anim__text anim__text--up">Монтаж раковины любой конфигурации</p>
+													<svg class="anim__svg" width="324" height="75" viewbox="0 0 324 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g class="anim__circles">
+															<circle cx="300.5" cy="46.5" r="7" fill="#FFAC30"></circle>
+															<path class="circle-mid" d="M293.5 46.5C293.5 42.634 296.634 39.5 300.5 39.5C304.366 39.5 307.5 42.634 307.5 46.5C307.5 50.366 304.366 53.5 300.5 53.5C296.634 53.5 293.5 50.366 293.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.5"></path>
+															<path class="circle-outer" d="M285.5 46.5C285.5 38.2157 292.216 31.5 300.5 31.5C308.784 31.5 315.5 38.2157 315.5 46.5C315.5 54.7843 308.784 61.5 300.5 61.5C292.216 61.5 285.5 54.7843 285.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.3"></path>
+															<path class="circle-max" d="M277.5 46.5C277.5 33.7975 287.797 23.5 300.5 23.5C313.203 23.5 323.5 33.7975 323.5 46.5C323.5 59.2026 313.203 69.5 300.5 69.5C287.797 69.5 277.5 59.2026 277.5 46.5Z" stroke="#FFAC30" stroke-opacity="0.1"></path>
+														</g>
+														<g class="anim__line">
+															<path class="path-diagonal" d="M300.5 46.5L229.5 5" stroke="#FFAC30"></path>
+															<path class="path-horizontal" d="M229.5 5H5" stroke="#FFAC30"></path>
+															<path class="path-end-circle" d="M9.5 5C9.5 7.48528 7.48528 9.5 5 9.5C2.51472 9.5 0.5 7.48528 0.5 5C0.5 2.51472 2.51472 0.5 5 0.5C7.48528 0.5 9.5 2.51472 9.5 5Z" stroke="#FFAC30"></path>
+														</g>
+													</svg>
+												</div>
+											</div>
+											<div class="hidden-block__info-item hidden-block__info-item--14 anim">
+												<!-- down-left -->
+												<div class="anim__inner">
+													<svg class="anim__svg" width="324" height="75" viewbox="0 0 324 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g class="anim__circles anim__circles--right">
+															<circle cx="300.5" cy="23.5" r="7" fill="#FFAC30"></circle>
+															<path class="circle-mid" d="M293.5 23.5C293.5 19.634 296.634 16.5 300.5 16.5C304.366 16.5 307.5 19.634 307.5 23.5C307.5 27.366 304.366 30.5 300.5 30.5C296.634 30.5 293.5 27.366 293.5 23.5Z" stroke="#FFAC30" stroke-opacity="0.5"></path>
+															<path class="circle-outer" d="M285.5 23.5C285.5 15.2157 292.216 8.5 300.5 8.5C308.784 8.5 315.5 15.2157 315.5 23.5C315.5 31.7843 308.784 38.5 300.5 38.5C292.216 38.5 285.5 31.7843 285.5 23.5Z" stroke="#FFAC30" stroke-opacity="0.3"></path>
+															<path class="circle-max" d="M277.5 23.5C277.5 10.7975 287.797 0.5 300.5 0.5C313.203 0.5 323.5 10.7975 323.5 23.5C323.5 36.2026 313.203 46.5 300.5 46.5C287.797 46.5 277.5 36.2026 277.5 23.5Z" stroke="#FFAC30" stroke-opacity="0.1"></path>
+														</g>
+														<g class="anim__line">
+															<path class="path-diagonal" d="M300.5 23.5L229.5 65" stroke="#FFAC30"></path>
+															<path class="path-horizontal" d="M229.5 65H5" stroke="#FFAC30"></path>
+															<path class="path-end-circle" d="M9.5 65C9.5 67.4853 7.48528 69.5 5 69.5C2.51472 69.5 0.5 67.4853 0.5 65C0.5 62.5147 2.51472 60.5 5 60.5C7.48528 60.5 9.5 62.5147 9.5 65Z" stroke="#FFAC30"></path>
+														</g>
+													</svg>
+													<p class="anim__text anim__text--left">Монтаж осветительных приборов</p>
+												</div>
+											</div>
+										</div>
+										<div class="hidden-block__slide swiper-slide">
+											<picture>
+												<source media="(max-width: 600px)" srcset="./assets/img/section3/extraSlider/ekstra4-600.webp" type="image/webp">
+												<source media="(max-width: 1200px)" srcset="./assets/img/section3/extraSlider/ekstra4-1200.webp" type="image/webp">
+												<img alt="стильна кімната" class="hidden-block__img" src="./assets/img/section3/extraSlider/ekstra4.webp">
+											</picture>
+										</div>
+									</div>
+									<!-- Якщо потрібна пагінація -->
+									<div class="hidden-block__navigate">
+										<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+										<button type="button" class="swiper-button-prev">
+											<svg viewbox="0 0 293 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M22.9082 29.418L0.908203 14.918L22.9082 0.417969M32.9082 14.918L292.908 14.918" stroke="white"></path>
+											</svg>
+										</button>
+										<div class="swiper-pagination"></div>
+										<button type="button" class="swiper-button-next">
+											<svg viewbox="0 0 295 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M272 0.417969L294 14.918L272 29.418M0 14.918L260 14.918" stroke="white"></path>
+											</svg>
+										</button>
+									</div>
+								</div>
 							</div>
 						</section>
 					</div>
