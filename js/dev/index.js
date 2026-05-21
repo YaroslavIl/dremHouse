@@ -182,6 +182,55 @@ function animatedNumber(from, to, duration, element, format = false) {
 function formatNumber(num) {
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
+const dots = document.querySelectorAll(".steps__dot");
+document.querySelectorAll(".steps__item");
+document.querySelector(".steps__progress");
+const stepNumber = document.querySelector(".steps__number");
+const totalSteps = dots.length;
+let activeStep = 0;
+function positionDots() {
+  const cx = 100;
+  const cy = 100;
+  const r = 90;
+  dots.forEach((dot, index) => {
+    const angle = index / totalSteps * 360 - 90;
+    const rad = angle * Math.PI / 180;
+    console.log(angle);
+    console.log(rad);
+    console.log(Math.PI);
+    const x = cx + r * Math.cos(rad);
+    const y = cy + r * Math.sin(rad);
+    dot.style.left = `${x / 200 * 100}%`;
+    dot.style.top = `${y / 200 * 100}%`;
+    dot.style.transform = "translate(-50%, -50%)";
+  });
+}
+function updateUI(stepIndex, isHover = false) {
+  const fillPercent = (stepIndex + 1) / totalSteps;
+  const offset = circumference - circumference * fillPercent;
+  progress.style.strokeDashoffset = offset;
+  stepNumber.textContent = stepIndex + 1;
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === stepIndex);
+  });
+  items.forEach((item, i) => {
+    item.classList.toggle("active", i === stepIndex);
+  });
+}
+dots.forEach((dot, index) => {
+  dot.addEventListener("mouseenter", () => {
+    updateUI(index, true);
+  });
+  dot.addEventListener("mouseleave", () => {
+    updateUI(activeStep);
+  });
+  dot.addEventListener("click", () => {
+    activeStep = index;
+    updateUI(activeStep);
+  });
+});
+positionDots();
+updateUI(activeStep);
 function isObject$1(obj) {
   return obj !== null && typeof obj === "object" && "constructor" in obj && obj.constructor === Object;
 }
