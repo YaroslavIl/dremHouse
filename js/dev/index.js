@@ -68,7 +68,6 @@ const linksOpen = document.querySelectorAll(".content__link--open");
 const openPage = document.querySelector(".fullpage__hidden-block");
 const btnClose$1 = document.querySelector(".hidden-block__btn--icon-arrow");
 const btnCloseTable = document.querySelector(".hidden-block__btn-table");
-console.log(linksOpen);
 linksOpen.forEach((e) => {
   e.addEventListener("click", () => {
     console.log(e);
@@ -115,6 +114,74 @@ circleArr.forEach((element) => {
     });
   }
 });
+const progress = document.querySelector(".price-calc__progress");
+const options = document.querySelectorAll(".price-calc__option");
+const numberArea = document.querySelector(".price-calc__number");
+const priceElement = document.querySelector(".price-calc__price");
+const circumference = 565;
+const firstOption = options[0];
+firstOption.classList.add("active");
+const initialFill = firstOption.dataset.fill;
+const initialArea = firstOption.dataset.area;
+const initialPrice = firstOption.dataset.price;
+const initialOffset = circumference - circumference * initialFill / 100;
+progress.style.strokeDashoffset = initialOffset;
+numberArea.textContent = initialArea;
+priceElement.textContent = initialPrice;
+options.forEach((option) => {
+  option.addEventListener("mouseenter", () => {
+    const fill = option.dataset.fill;
+    const area = parseInt(option.dataset.area);
+    const price = option.dataset.price;
+    console.log(price);
+    const offset = circumference - circumference * fill / 100;
+    progress.style.strokeDashoffset = offset;
+    priceElement.textContent = price;
+    const currentArea = parseInt(numberArea.textContent);
+    const currentPrice = parseInt(priceElement.textContent);
+    animatedNumber(currentArea, area, 500, numberArea, false);
+    animatedNumber(currentPrice, price, 500, priceElement, true);
+  });
+  option.addEventListener("mouseleave", () => {
+    const activeOption = document.querySelector(".price-calc__option.active");
+    if (activeOption) {
+      const fill = activeOption.dataset.fill;
+      const area = activeOption.dataset.area;
+      const price = activeOption.dataset.price;
+      const offset = circumference - circumference * fill / 100;
+      progress.style.strokeDashoffset = offset;
+      numberArea.textContent = area;
+      priceElement.textContent = price;
+    }
+  });
+  option.addEventListener("click", () => {
+    options.forEach((el) => el.classList.remove("active"));
+    option.classList.add("active");
+  });
+});
+function animatedNumber(from, to, duration, element, format = false) {
+  let localTimer;
+  const fromNum = parseInt(String(from).replace(/\s/g, ""));
+  const toNum = parseInt(String(to).replace(/\s/g, ""));
+  const range = Math.abs(toNum - fromNum);
+  if (range === 0) return;
+  const steps = 60;
+  const stepTime = duration / steps;
+  const step = Math.ceil(range / steps) * (toNum > fromNum ? 1 : -1);
+  let current = fromNum;
+  localTimer = setInterval(() => {
+    current += step;
+    if (step > 0 && current >= toNum || step < 0 && current <= toNum) {
+      element.textContent = format ? formatNumber(toNum) : toNum;
+      clearInterval(localTimer);
+      return;
+    }
+    element.textContent = format ? formatNumber(current) : current;
+  }, stepTime);
+}
+function formatNumber(num) {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
 function isObject$1(obj) {
   return obj !== null && typeof obj === "object" && "constructor" in obj && obj.constructor === Object;
 }
@@ -387,8 +454,8 @@ function animateCSSModeScroll({
     if (startTime === null) {
       startTime = time;
     }
-    const progress = Math.max(Math.min((time - startTime) / duration, 1), 0);
-    const easeProgress = 0.5 - Math.cos(progress * Math.PI) / 2;
+    const progress2 = Math.max(Math.min((time - startTime) / duration, 1), 0);
+    const easeProgress = 0.5 - Math.cos(progress2 * Math.PI) / 2;
     let currentPosition = startPosition + easeProgress * (targetPosition - startPosition);
     if (isOutOfBound(currentPosition, targetPosition)) {
       currentPosition = targetPosition;
@@ -689,7 +756,7 @@ function Observer({
 }) {
   const observers = [];
   const window2 = getWindow();
-  const attach = (target, options = {}) => {
+  const attach = (target, options2 = {}) => {
     const ObserverFunc = window2.MutationObserver || window2.WebkitMutationObserver;
     const observer = new ObserverFunc((mutations) => {
       if (swiper.__preventObserver__) return;
@@ -707,9 +774,9 @@ function Observer({
       }
     });
     observer.observe(target, {
-      attributes: typeof options.attributes === "undefined" ? true : options.attributes,
-      childList: swiper.isElement || (typeof options.childList === "undefined" ? true : options).childList,
-      characterData: typeof options.characterData === "undefined" ? true : options.characterData
+      attributes: typeof options2.attributes === "undefined" ? true : options2.attributes,
+      childList: swiper.isElement || (typeof options2.childList === "undefined" ? true : options2).childList,
+      characterData: typeof options2.characterData === "undefined" ? true : options2.characterData
     });
     observers.push(observer);
   };
@@ -1245,7 +1312,7 @@ function updateProgress(translate2) {
   const params = swiper.params;
   const translatesDiff = swiper.maxTranslate() - swiper.minTranslate();
   let {
-    progress,
+    progress: progress2,
     isBeginning,
     isEnd,
     progressLoop
@@ -1253,17 +1320,17 @@ function updateProgress(translate2) {
   const wasBeginning = isBeginning;
   const wasEnd = isEnd;
   if (translatesDiff === 0) {
-    progress = 0;
+    progress2 = 0;
     isBeginning = true;
     isEnd = true;
   } else {
-    progress = (translate2 - swiper.minTranslate()) / translatesDiff;
+    progress2 = (translate2 - swiper.minTranslate()) / translatesDiff;
     const isBeginningRounded = Math.abs(translate2 - swiper.minTranslate()) < 1;
     const isEndRounded = Math.abs(translate2 - swiper.maxTranslate()) < 1;
-    isBeginning = isBeginningRounded || progress <= 0;
-    isEnd = isEndRounded || progress >= 1;
-    if (isBeginningRounded) progress = 0;
-    if (isEndRounded) progress = 1;
+    isBeginning = isBeginningRounded || progress2 <= 0;
+    isEnd = isEndRounded || progress2 >= 1;
+    if (isBeginningRounded) progress2 = 0;
+    if (isEndRounded) progress2 = 1;
   }
   if (params.loop) {
     const firstSlideIndex = swiper.getSlideIndexByData(0);
@@ -1280,7 +1347,7 @@ function updateProgress(translate2) {
     if (progressLoop > 1) progressLoop -= 1;
   }
   Object.assign(swiper, {
-    progress,
+    progress: progress2,
     progressLoop,
     isBeginning,
     isEnd
@@ -1295,7 +1362,7 @@ function updateProgress(translate2) {
   if (wasBeginning && !isBeginning || wasEnd && !isEnd) {
     swiper.emit("fromEdge");
   }
-  swiper.emit("progress", progress);
+  swiper.emit("progress", progress2);
 }
 const toggleSlideClasses = (slideEl, condition, className) => {
   if (condition && !slideEl.classList.contains(className)) {
@@ -1599,7 +1666,7 @@ function setTranslate(translate2, byController) {
     rtlTranslate: rtl,
     params,
     wrapperEl,
-    progress
+    progress: progress2
   } = swiper;
   let x = 0;
   let y = 0;
@@ -1632,7 +1699,7 @@ function setTranslate(translate2, byController) {
   } else {
     newProgress = (translate2 - swiper.minTranslate()) / translatesDiff;
   }
-  if (newProgress !== progress) {
+  if (newProgress !== progress2) {
     swiper.updateProgress(translate2);
   }
   swiper.emit("setTranslate", swiper.translate, byController);
@@ -3816,12 +3883,12 @@ class Swiper {
     }
     swiper.emit("disable");
   }
-  setProgress(progress, speed) {
+  setProgress(progress2, speed) {
     const swiper = this;
-    progress = Math.min(Math.max(progress, 0), 1);
+    progress2 = Math.min(Math.max(progress2, 0), 1);
     const min = swiper.minTranslate();
     const max = swiper.maxTranslate();
-    const current = (max - min) * progress + min;
+    const current = (max - min) * progress2 + min;
     swiper.translateTo(current, typeof speed === "undefined" ? 0 : speed);
     swiper.updateActiveIndex();
     swiper.updateSlidesClasses();
@@ -4901,7 +4968,7 @@ function initSliders() {
 }
 document.querySelector("[data-fls-slider]") ? window.addEventListener("load", initSliders) : null;
 class Popup {
-  constructor(options) {
+  constructor(options2) {
     let config = {
       logging: true,
       init: true,
@@ -4988,18 +5055,18 @@ class Popup {
     ];
     this.options = {
       ...config,
-      ...options,
+      ...options2,
       classes: {
         ...config.classes,
-        ...options?.classes
+        ...options2?.classes
       },
       hashSettings: {
         ...config.hashSettings,
-        ...options?.hashSettings
+        ...options2?.hashSettings
       },
       on: {
         ...config.on,
-        ...options?.on
+        ...options2?.on
       }
     };
     this.bodyLock = false;
@@ -5224,7 +5291,7 @@ function menuInit$1() {
 }
 document.querySelector("[data-fls-menu]") ? window.addEventListener("load", menuInit$1) : null;
 class FullPage {
-  constructor(element, options) {
+  constructor(element, options2) {
     let config = {
       //===============================
       // Селектор, на якому не працює подія свайпа/колеса
@@ -5277,7 +5344,7 @@ class FullPage {
       onDestroy: function() {
       }
     };
-    this.options = Object.assign(config, options);
+    this.options = Object.assign(config, options2);
     this.wrapper = element;
     this.sections = this.wrapper.querySelectorAll(this.options.selectorSection);
     this.activeSection = false;
@@ -5874,10 +5941,10 @@ function digitsCounter() {
     const startPosition = 0;
     const step = (timestamp) => {
       if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      const value = Math.floor(progress * (startPosition + startValue));
+      const progress2 = Math.min((timestamp - startTimestamp) / duration, 1);
+      const value = Math.floor(progress2 * (startPosition + startValue));
       digitsCounter2.innerHTML = typeof digitsCounter2.dataset.flsDigcounterFormat !== "undefined" ? getDigFormat(value, format) : value;
-      if (progress < 1) {
+      if (progress2 < 1) {
         window.requestAnimationFrame(step);
       } else {
         digitsCounter2.removeAttribute("data-fls-digcounter-go");

@@ -176,7 +176,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .fullpage__pic {
   width: 100%;
@@ -879,6 +879,181 @@ body {
 
 .swiper-button-next {
   color: darkblue;
+}
+
+.price-calc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5.5rem;
+}
+.price-calc__inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.9375rem;
+}
+.price-calc__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.375rem;
+}
+.price-calc__text {
+  letter-spacing: 0.3em;
+  max-width: 34.75rem;
+}
+.price-calc__text {
+  width: 100%;
+  text-align: center;
+}
+.price-calc__circle-wrap {
+  position: relative;
+  width: 12.5rem;
+  height: 12.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.price-calc__svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.price-calc__progress {
+  transition: stroke-dashoffset 0.6s ease-in-out;
+}
+.price-calc__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.price-calc__number {
+  font-family: "Bruno Ace", sans-serif;
+  font-size: 4rem;
+  display: block;
+  line-height: 109%;
+  text-align: center;
+}
+.price-calc__unit {
+  font-size: 1.5rem;
+  line-height: 200%;
+  letter-spacing: 0.1em;
+  translate: 0 -2.5rem;
+}
+.price-calc__options {
+  display: flex;
+  gap: 2.5rem;
+  padding-bottom: 3.75rem;
+}
+.price-calc__decor {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, background-color 0.4s ease-in-out 0s, box-shadow 0.4s ease-in-out 0s, outline 0.4s ease-in-out, outline-offset 0.4s ease-in-out;
+  box-shadow: 0rem 0rem 0.1875rem #ffac30, 0 0 1.875rem rgba(255, 255, 255, 0.8);
+  position: relative;
+}
+.price-calc__option {
+  transition: color 0.3s ease;
+  font-family: "Bruno Ace", sans-serif;
+  font-size: 1.75rem;
+}
+.price-calc__option {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.25rem;
+}
+.price-calc__option:first-of-type .price-calc__decor::after, .price-calc__option:last-of-type .price-calc__decor::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -5rem;
+  transform: translate(0, -50%);
+  display: block;
+  width: 3.75rem;
+  border: solid rgba(255, 255, 255, 0.4);
+  transition: border-color 0.4s ease-in-out;
+}
+.price-calc__option:last-of-type .price-calc__decor::after {
+  left: 1.875rem;
+}
+.price-calc__option:not(:first-of-type):not(:last-of-type) .price-calc__decor::after,
+.price-calc__option:not(:first-of-type):not(:last-of-type) .price-calc__decor::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -5.625rem;
+  transform: translate(0, -50%);
+  display: block;
+  width: 4.375rem;
+  border: solid rgba(255, 255, 255, 0.4);
+  transition: border-color 0.4s ease-in-out;
+}
+.price-calc__option:not(:first-of-type):not(:last-of-type) .price-calc__decor::before {
+  left: 1.875rem;
+}
+.price-calc__option:not(:first-of-type):not(:last-of-type).active .price-calc__decor::after,
+.price-calc__option:not(:first-of-type):not(:last-of-type).active .price-calc__decor::before, .price-calc__option:not(:first-of-type):not(:last-of-type):hover .price-calc__decor::after,
+.price-calc__option:not(:first-of-type):not(:last-of-type):hover .price-calc__decor::before {
+  border-color: #ffac30;
+}
+.price-calc__option.active, .price-calc__option:hover {
+  color: #FFAC30;
+}
+.price-calc__option.active .price-calc__decor, .price-calc__option:hover .price-calc__decor {
+  opacity: 1;
+  background-color: #ffac30;
+  outline: solid 0.0625rem #ffac30;
+  outline-offset: 0.9375rem;
+}
+.price-calc__option.active .price-calc__decor::after,
+.price-calc__option.active .price-calc__decor::before, .price-calc__option:hover .price-calc__decor::after,
+.price-calc__option:hover .price-calc__decor::before {
+  border-color: #ffac30;
+}
+.price-calc__arrow--icon-arrow {
+  font-size: 2.5rem;
+  translate: 0 40%;
+}
+.price-calc__arrow {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+}
+.price-calc__box {
+  font-size: 1.5rem;
+  line-height: 2;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.price-calc__price {
+  font-family: "Bruno Ace", sans-serif;
+  font-size: 4rem;
+}
+.price-calc__price {
+  line-height: 1;
+  min-width: 26.5625rem;
 }
 
 @keyframes slogan {
@@ -2250,6 +2425,18 @@ body::after {
     transform: translate(20%, 0);
   }
 }
+@media (max-width: 78.125em){
+  .price-calc {
+    justify-content: flex-start;
+    padding-top: 7.8125rem;
+  }
+  .price-calc__inner {
+    flex-direction: column;
+  }
+  .price-calc__options {
+    padding-bottom: 0;
+  }
+}
 @media (max-width: 75em){
   .content__close-service {
     top: -4.0625rem;
@@ -2332,6 +2519,13 @@ body::after {
   }
   .hidden-block__info-item--12 {
     left: 20%;
+  }
+}
+@media (max-width: 48.0625em){
+  .price-calc {
+    padding-block: 3.125rem;
+    padding-inline: 0.625rem;
+    justify-content: space-around;
   }
 }
 @media (max-width: 48em){
@@ -2491,6 +2685,14 @@ body::after {
     width: 100%;
     max-width: 12.5rem;
   }
+  .price-calc__option:not(:first-of-type):not(:last-of-type) .price-calc__decor::after,
+  .price-calc__option:not(:first-of-type):not(:last-of-type) .price-calc__decor::before {
+    left: -4.375rem;
+    width: 3.125rem;
+  }
+  .price-calc__arrow {
+    display: none;
+  }
   .sidepanel {
     display: none;
   }
@@ -2582,6 +2784,13 @@ body::after {
     display: none;
   }
 }
+@media (max-width: 34.375em){
+  .price-calc__option:not(:first-of-type):not(:last-of-type) .price-calc__decor::after,
+  .price-calc__option:not(:first-of-type):not(:last-of-type) .price-calc__decor::before {
+    left: -3.75rem;
+    width: 2.5rem;
+  }
+}
 @media (max-width: 31.25em){
   .contact__logo {
     display: none;
@@ -2604,6 +2813,15 @@ body::after {
   .hidden-block__info-item--13 {
     left: 20%;
     top: 40%;
+  }
+  .price-calc__option:first-of-type .price-calc__decor::after, .price-calc__option:last-of-type .price-calc__decor::after {
+    left: -3.75rem;
+    width: 2.5rem;
+  }
+  .price-calc__option:not(:first-of-type):not(:last-of-type) .price-calc__decor::after,
+  .price-calc__option:not(:first-of-type):not(:last-of-type) .price-calc__decor::before {
+    left: -3.4375rem;
+    width: 2.1875rem;
   }
 }
 @media (width <= 20em){
@@ -2637,6 +2855,18 @@ body::after {
   .swiper-button-prev,
   .swiper-button-next {
     max-width: 6.25rem;
+  }
+  .price-calc {
+    gap: 3.125rem;
+  }
+  .price-calc__text {
+    font-size: 0.875rem;
+  }
+  .price-calc__price {
+    font-size: 1.875rem;
+  }
+  .price-calc__price {
+    min-width: 11.875rem;
   }
   .list__link {
     font-size: 1.125rem;
@@ -2702,6 +2932,18 @@ body::after {
   .hidden-block__navigate {
     padding-inline: clamp( 1.375rem , 0.08035714285625rem  +  6.4732142857vw , 3.1875rem );
   }
+  .price-calc {
+    gap: clamp( 3.125rem , 0.89285714285625rem  +  11.1607142857vw , 6.25rem );
+  }
+  .price-calc__text {
+    font-size: clamp( 0.875rem , 0.69642857143125rem  +  0.8928571429vw , 1.125rem );
+  }
+  .price-calc__text {
+    max-width: clamp( 16.25rem , 5.89285714285625rem  +  51.7857142857vw , 30.75rem );
+  }
+  .price-calc__option {
+    font-size: clamp( 0.875rem , 0.42857142856875rem  +  2.2321428571vw , 1.5rem );
+  }
   .contact__top {
     gap: clamp( 0.625rem , -2.05357142856875rem  +  13.3928571429vw , 4.375rem );
   }
@@ -2746,6 +2988,12 @@ body::after {
   .swiper-button-prev,
   .swiper-button-next {
     max-width: clamp( 6.25rem , 1.7956570155875rem  +  22.271714922vw , 12.5rem );
+  }
+  .price-calc__price {
+    font-size: clamp( 1.875rem , 0.3605233853rem  +  7.5723830735vw , 4rem );
+  }
+  .price-calc__price {
+    min-width: clamp( 11.875rem , 1.4072939866375rem  +  52.3385300668vw , 26.5625rem );
   }
   .list__link {
     font-size: clamp( 1.125rem , 0.7241091314rem  +  2.004454343vw , 1.6875rem );
@@ -2808,6 +3056,9 @@ body::after {
   .swiper-button-next {
     max-width: clamp( 7.5rem , 1.40649762281875rem  +  12.6782884311vw , 12.5rem );
   }
+  .price-calc__text {
+    font-size: clamp( 1.125rem , 0.82032488114375rem  +  0.6339144216vw , 1.375rem );
+  }
   .form .form__tel::placeholder,
   .form .form__name::placeholder {
     font-size: clamp( 0.9375rem , 0.70899366085625rem  +  0.4754358162vw , 1.125rem );
@@ -2828,6 +3079,17 @@ body::after {
   }
   .statistics__card p {
     max-width: clamp( 7.5rem , -2.4564500941625rem  +  20.7156308851vw , 14.375rem );
+  }
+  .price-calc {
+    gap: clamp( 2.5rem , -1.8446327683625rem  +  9.0395480226vw , 5.5rem );
+  }
+}
+@media (width > 48.0625em) and (width <= 118.75em){
+  .price-calc__price {
+    font-size: clamp( 2.5rem , 1.48010610079375rem  +  2.1220159151vw , 4rem );
+  }
+  .price-calc__price {
+    min-width: clamp( 16.875rem , 10.28818523430625rem  +  13.7046861185vw , 26.5625rem );
   }
 }
 @media (width > 48.0625em) and (width <= 100em){
@@ -2897,6 +3159,9 @@ body::after {
   .statistics__card p {
     max-width: 14.375rem;
   }
+  .price-calc {
+    gap: 5.5rem;
+  }
   .about__title {
     font-size: 2.25rem;
   }
@@ -2929,6 +3194,9 @@ body::after {
   .swiper-button-prev,
   .swiper-button-next {
     max-width: 12.5rem;
+  }
+  .price-calc__text {
+    font-size: 1.375rem;
   }
 }
 @media (width > 93.75em){
@@ -2969,6 +3237,14 @@ body::after {
   }
   .contact__map, .contact__tel, .contact__time, .contact__mail {
     gap: 1.875rem;
+  }
+}
+@media (width > 118.75em){
+  .price-calc__price {
+    font-size: 4rem;
+  }
+  .price-calc__price {
+    min-width: 26.5625rem;
   }
 }
 @media (any-hover: hover){
